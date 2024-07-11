@@ -10,6 +10,8 @@ with st.form(key='my_form'):
 if submit_button:
     with st.spinner('Downloading images...'):
         rint = download(tiktok_url)
-with open(f"{rint}.zip", "rb") as f:
-    st.download_button(label="Download images", data=f, file_name=f"{rint}.zip", mime="application/zip")
+        st.toast(f"Downloaded images to {rint}")
+
+    with open(f"{rint}.zip", "rb") as f:
+        st.download_button(label="Download images", data=f, file_name=f"{rint}.zip", mime="application/zip")
 

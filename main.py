@@ -4,7 +4,6 @@ import time
 import os
 import random
 import sys
-url = input("Wpisz url slajdszoła:")
 def download(url):
     playwright = sync_playwright().start()
     browser = playwright.chromium.launch(headless=True)
@@ -52,3 +51,4 @@ def download(url):
     print("Pobieranie zakończone")
     print("Zdjęcia znajdziesz w folderze "+str(random_int))
     return random_int
+
