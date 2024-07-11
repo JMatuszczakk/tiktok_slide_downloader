@@ -51,3 +51,4 @@ def download(url):
             urlretrieve(urls[i], f"{base_filepath}\\{random_int}\\{i}.jpg")
     print("Pobieranie zakończone")
     print("Zdjęcia znajdziesz w folderze "+str(random_int))
+    return random_int
